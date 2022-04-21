@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style/editProfilePage.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="height: 100vh">
+    <!-- dropdown-navbar -->
+    <nav
+      style="height: 12%"
+      class="navbar navbar-expand-lg navbar-light bg-light"
+    >
+      <div class="container-fluid">
+        <!-- making the collapse button -->
+        <a class="navbar-brand" href="#">
+          <img class="logo-img" src="logo.jpeg" alt="Artistic Lounge" />
+          <span
+            class="navbar-text ms-1 nav-txt"
+            style="
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              color: darkgoldenrod;
+            "
+            >Artistic Lounge</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navItems"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- making the collapseable menu -->
+        <div id="navItems" class="collapse navbar-collapse">
+          <!-- <span class="navbar-text ms-1 display-6">Artistic Lounge</span> -->
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutUsPage.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactUsPage.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicePage.html">Service</a>
+            </li>
+            <!-- making dropdown -->
+          </ul>
+
+          <!-- adding right most div  -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- update -->
+    <main>
+      <form>
+        <!-- image section -->
+        <div class="d-inline-block">
+          <img
+            id="image"
+            class="mt-5 rounded-circle"
+            src="user.png"
+            alt="Artistic Lounge"
+            style="margin-left: 300px; width: 200px; height: 200px"
+          />
+          <!-- button -->
+          <div class="d-grid d-md-flex mt-4" style="margin-left: 282px">
+            <input type="file" id="file" onchange="putImage()" />
+            <!-- <button type="button" class="btn btn-danger">Remove</button> -->
+          </div>
+        </div>
+
+        <!-- profile section -->
+        <div
+          style="width: 300px; margin-right: 180px; float: right"
+          class="d-inline-block"
+        >
+          <div style="padding-top: 10px">
+            <ul
+              class="nav nav-pills justify-content-md-center justify-content-sm-start"
+            ></ul>
+          </div>
+          <div class="p-1">
+            <div class="mb-2 mt-5">
+              <input
+                id="name"
+                type="text"
+                class="form-control rounded-pill"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Name"
+              />
+            </div>
+            <div class="mb-2">
+              <input
+                id="gender"
+                type="text"
+                class="form-control rounded-pill"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Gender"
+              />
+            </div>
+            <div class="mb-2">
+              <input
+                id="number"
+                type="text"
+                class="form-control rounded-pill"
+                id="exampleInputPassword1"
+                placeholder="Phone"
+              />
+            </div>
+            <div class="mb-2">
+              <input
+                id="location"
+                type="text"
+                class="form-control rounded-pill"
+                id="exampleInputPassword1"
+                placeholder="Location"
+              />
+            </div>
+            <div class="mb-2">
+              <input
+                type="password"
+                class="form-control rounded-pill"
+                id="exampleInputPassword1"
+                placeholder="Current Password"
+              />
+            </div>
+            <div class="mb-2">
+              <input
+                type="password"
+                class="form-control rounded-pill"
+                id="exampleInputPassword1"
+                placeholder="New Password"
+              />
+            </div>
+            <div class="mb-2">
+              <input
+                type="password"
+                class="form-control rounded-pill"
+                id="exampleInputPassword1"
+                placeholder="Confirm Password"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+
+        <!-- update button -->
+        <div
+          class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-start mt-4"
+        >
+          <button
+            onclick="update()"
+            type="button"
+            class="btn btn-outline-success"
+            style="width: 200px"
+          >
+            Update Profile
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <!-- javascript, jquery, popper link -->
+    <script src="../javascript/popper.min.js"></script>
+    <script src="../javascript/bootstrap.min.js"></script>
+    <script src="../javascript/editProfile.js"></script>
+  </body>
+</html>

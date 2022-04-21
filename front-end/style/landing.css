@@ -1,0 +1,27 @@
+.logo-img {
+  border-radius: 50%;
+  width: 60px;
+  height: 100%;
+}
+
+.nav-txt {
+  font-size: 1.7rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 40px;
+  height: 100%;
+}
+
+.login-text {
+  cursor: pointer;
+}
+
+.main-div {
+  height: 88%;
+  background-image: url("../bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

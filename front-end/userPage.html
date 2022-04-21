@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../front-end/style/userPage.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="height: 100vh">
+    <!-- dropdown-navbar -->
+    <nav
+      style="height: 12%"
+      class="navbar navbar-expand-lg navbar-light bg-light"
+    >
+      <div class="container-fluid">
+        <!-- making the collapse button -->
+        <a class="navbar-brand" href="#">
+          <img class="logo-img" src="logo.jpeg" alt="Artistic Lounge" />
+          <span
+            class="navbar-text ms-1 nav-txt"
+            style="
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              color: darkgoldenrod;
+            "
+            >Artistic Lounge</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navItems"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- making the collapseable menu -->
+        <div id="navItems" class="collapse navbar-collapse">
+          <!-- <span class="navbar-text ms-1 display-6">Artistic Lounge</span> -->
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+            <!-- making dropdown -->
+          </ul>
+
+          <!-- adding right most div  -->
+        </div>
+      </div>
+    </nav>
+
+    <main id="main" class="main-div d-flex"></main>
+
+    <!-- javascript, jquery, popper link -->
+    <script src="../javascript/popper.min.js"></script>
+    <script src="../javascript/bootstrap.min.js"></script>
+    <script src="../javascript//user.js"></script>
+  </body>
+</html>

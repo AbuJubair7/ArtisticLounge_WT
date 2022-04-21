@@ -1,0 +1,37 @@
+.logo-img {
+  border-radius: 50%;
+  width: 60px;
+  height: 100%;
+}
+
+.nav-txt {
+  font-size: 1.7rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 40px;
+  height: 100%;
+}
+
+.login-text {
+  cursor: pointer;
+}
+
+.main-div {
+  height: 88%;
+  background-image: url("../adminBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.5);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06); */
+}

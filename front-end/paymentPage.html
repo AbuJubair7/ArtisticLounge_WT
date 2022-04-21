@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style/paymentPage.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="height: 100vh">
+    <!-- dropdown-navbar -->
+    <nav
+      style="height: 12%"
+      class="navbar navbar-expand-lg navbar-light bg-light"
+    >
+      <div class="container-fluid">
+        <!-- making the collapse button -->
+        <a class="navbar-brand" href="#">
+          <img class="logo-img" src="logo.jpeg" alt="Artistic Lounge" />
+          <span
+            class="navbar-text ms-1 nav-txt"
+            style="
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              color: darkgoldenrod;
+            "
+            >Artistic Lounge</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navItems"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- making the collapseable menu -->
+        <div id="navItems" class="collapse navbar-collapse">
+          <!-- <span class="navbar-text ms-1 display-6">Artistic Lounge</span> -->
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutUsPage.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactUsPage.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicePage.html">Service</a>
+            </li>
+            <!-- making dropdown -->
+          </ul>
+
+          <!-- adding right most div  -->
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-div">
+      <!-- card -->
+      <div class="d-inline-block" style="padding-top: 10px; margin-left: 170px">
+        <div class="card" style="width: 20rem; height: 27rem">
+          <img id="image" src="tiger.jpeg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 id="title" class="card-title">Tiger</h4>
+            <p id="detail" class="card-text">
+              Art By: Mahjabin Mim <br />
+              Catagory: Vector Art <br />
+              Product Code: 017
+            </p>
+            <h5 id="price" style="color: red">700 TK.</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Method -->
+      <form style="width: 300px; margin-left: 150px" class="d-inline-block">
+        <div>
+          <ul
+            class="nav nav-pills justify-content-md-center justify-content-sm-start"
+          ></ul>
+        </div>
+        <div class="p-1">
+          <div class="mb-3 mt-5">
+            <h6>Select Payment Method</h6>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1"
+                >Pay With Card</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2"
+                >Mobile Banking
+              </label>
+            </div>
+          </div>
+          <div>
+            <!-- gift option -->
+            <div class="form-check">
+              <input
+                onchange="checkChange()"
+                id="check"
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked"
+                checked
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                Send as Gift
+              </label>
+            </div>
+          </div>
+
+          <div class="mt-2">
+            <!-- subtotal -->
+            <div class="d-inline-block justify-content-sm-start">
+              <label>Subtotal</label>
+            </div>
+            <div class="d-inline-block" style="float: right">
+              <label id="t_price">700.00 TK.</label>
+            </div>
+            <div class="clear"></div>
+
+            <!-- shipping -->
+            <div class="d-inline-block justify-content-sm-start">
+              <label>Shipping</label>
+            </div>
+            <div class="d-inline-block" style="float: right">
+              <label>49.00 TK.</label>
+            </div>
+            <div class="clear"></div>
+
+            <!-- extra charge -->
+            <div class="d-inline-block justify-content-sm-start">
+              <label>Extra Charge</label>
+            </div>
+            <div class="d-inline-block" style="float: right">
+              <label id="extra">0.00 TK.</label>
+            </div>
+            <div class="clear"></div>
+
+            <!-- Total -->
+            <div class="border-top">
+              <div class="d-inline-block justify-content-sm-start">
+                <label>Total</label>
+              </div>
+              <div class="d-inline-block" style="float: right">
+                <label id="total">749.00 TK.</label>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <!-- confirm button -->
+        <div
+          class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-sm-start"
+        >
+          <button
+            onclick="confirm()"
+            type="button"
+            class="btn btn-outline-success"
+          >
+            Confirm Order
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <!-- javascript, jquery, popper link -->
+    <script src="../javascript/popper.min.js"></script>
+    <script src="../javascript/bootstrap.min.js"></script>
+
+    <script src="../javascript//pay.js"></script>
+  </body>
+</html>
